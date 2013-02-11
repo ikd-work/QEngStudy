@@ -1,0 +1,30 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @news.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @news.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="news[en_news]" class="fieldLabel">En news</label>
+            <input type="text" id="news[en_news]" name="news[en_news]" <%= placeholder("En news") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="news[jp_news]" class="fieldLabel">Jp news</label>
+            <input type="text" id="news[jp_news]" name="news[jp_news]" <%= placeholder("Jp news") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

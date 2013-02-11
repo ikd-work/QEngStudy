@@ -1,0 +1,26 @@
+#sdk: "/Users/ike_dai/.rvm/gems/ruby-1.9.3-p286/gems/rhodes-3.5.1.12"
+sdkversion: 3.5.0
+name: QEngStudy
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  #sdk: iphonesimulator5.0
+  sdk: iphonesimulator6.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.qengstudy
+  BundleURLScheme: qengstudy
+wp:
+  productid: '792f0100-54e9-0130-972d-7cd1c3da48d1'
+symbian:
+  uid: '0xef57d9fe'
+android:
+  #version: 2.1
+  version: 4.2 
+
+extensions: ["json", "another-extension"]
